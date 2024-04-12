@@ -26,9 +26,9 @@ public class WidgetServiceTests {
   public void when_getAllWidgets_expect_findAllResult() throws Exception {
     Widget widget = Widget.builder().name("Widgette Nielson").build();
     List<Widget> response = List.of(widget);
-    when(widgetRepository.findAll()).thenReturn(response);
+    when(widgetRepository.findAll(null, null, null)).thenReturn(response);
 
-    List<Widget> result = widgetService.getAllWidgets();
+    List<Widget> result = widgetService.getAllWidgets(null, null, null);
 
     assertThat(result).isEqualTo(response);
   }

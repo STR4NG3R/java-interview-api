@@ -48,7 +48,7 @@ public class WidgetControllerTests {
   public void when_getAllWidgets_expect_allWidgets() throws Exception {
     Widget widget = Widget.builder().name("Widget von Hammersmark").build();
     List<Widget> allWidgets = List.of(widget);
-    when(widgetService.getAllWidgets()).thenReturn(allWidgets);
+    when(widgetService.getAllWidgets(null,null,null)).thenReturn(allWidgets);
 
     MvcResult result = mockMvc.perform(get("/v1/widgets"))
                .andExpect(status().isOk())

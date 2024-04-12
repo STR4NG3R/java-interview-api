@@ -20,8 +20,12 @@ dependencies {
 	// Spring Boot
 	implementation 'org.springframework.boot:spring-boot-starter'
 
+	implementation('io.springfox:springfox-swagger2:3.0.0')
+	implementation('io.springfox:springfox-boot-starter:3.0.0')
+	implementation('io.springfox:springfox-swagger-ui:3.0.0')
 	// https://mvnrepository.com/artifact/org.springframework/spring-web
 	implementation 'org.springframework:spring-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:3.2.4'
 
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
